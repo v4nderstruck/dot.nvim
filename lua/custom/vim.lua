@@ -37,3 +37,7 @@ vim.o.termguicolors = true
 
 vim.opt.colorcolumn = "88"
 vim.opt.scrolloff = 16
+
+-- relative line numbers
+vim.opt.relativenumber = true
+

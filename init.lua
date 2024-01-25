@@ -81,19 +81,26 @@ require('lazy').setup({
   'tpope/vim-sleuth',
 
   -- color theme, scheme
-  {
-    "rebelot/kanagawa.nvim",
+  { "ellisonleao/gruvbox.nvim", 
     priority = 1000,
-    
     config = function()
-      vim.cmd([[colorscheme kanagawa]])
+      vim.o.backgroud = "dark"
+      vim.cmd([[colorscheme gruvbox]])
     end,
+
   },
+  -- {
+  --   "rebelot/kanagawa.nvim",
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd([[colorscheme kanagawa]])
+  --   end,
+  -- },
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',     opts = {} },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',    opts = {} },
 
   {
     -- Highlight, edit, and navigate code
@@ -110,19 +117,19 @@ require('lazy').setup({
     "zbirenbaum/copilot.lua",
     opts = {
       panel = {
-          enabled = true,
-          auto_refresh = true,
-          keymap = {
-            jump_prev = "[[",
-            jump_next = "]]",
-            accept = "<CR>",
-            refresh = "gr",
-            open = "<M-CR>"
-          },
-          layout = {
-            position = "bottom", -- | top | left | right
-            ratio = 0.4
-          },
+        enabled = true,
+        auto_refresh = true,
+        keymap = {
+          jump_prev = "[[",
+          jump_next = "]]",
+          accept = "<CR>",
+          refresh = "gr",
+          open = "<M-CR>"
+        },
+        layout = {
+          position = "bottom",   -- | top | left | right
+          ratio = 0.4
+        },
       },
       suggestion = {
         enabled = true,
@@ -148,7 +155,7 @@ require('lazy').setup({
       "neoclide/coc.nvim",
     },
     -- See `:help lualine.txt`
-    config = function ()
+    config = function()
       require("lualine").setup({
       })
     end
@@ -603,7 +610,7 @@ end, 0)
 -- mason_lspconfig.setup {
 --   ensure_installed = vim.tbl_keys(servers),
 -- }
--- 
+--
 -- mason_lspconfig.setup_handlers {
 --   function(server_name)
 --     require('lspconfig')[server_name].setup {

@@ -41,3 +41,7 @@ vim.opt.scrolloff = 16
 -- relative line numbers
 vim.opt.relativenumber = true
 
+-- set tab as 2 spaces
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+
